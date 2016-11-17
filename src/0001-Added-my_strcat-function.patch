@@ -1,0 +1,35 @@
+From 76e3aad14d7e3ca669b1dd654a5e8b0cbfd7dd3a Mon Sep 17 00:00:00 2001
+From: hk <kong921@gmail.com>
+Date: Thu, 17 Nov 2016 11:37:19 +0800
+Subject: [PATCH] Added my_strcat function
+
+---
+ src/string_operation.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+
+diff --git a/src/string_operation.c b/src/string_operation.c
+index ea15d05..ecd5f21 100755
+--- a/src/string_operation.c
++++ b/src/string_operation.c
+@@ -1,4 +1,18 @@
+ #include <stdio.h>
++
++char *my_strcat(char *t, char *s)
++{
++	char *p = t;
++
++	while(*p)
++		++p;
++
++	while(*p++ = *s++)
++	;
++	
++	return t;	
++}
++
+ size_t my_strlen(const char *s)
+ {
+ 	char *p = s;
+-- 
+1.9.1
+
